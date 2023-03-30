@@ -16,8 +16,7 @@ int main(int argc, char* argv[])
 	
 	SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, 0);
 
-	
-	;
+	SDL_Event event;
 
 	SDL_Texture* texture1 = loadTexture(renderer, "res/texture1.png");
 
