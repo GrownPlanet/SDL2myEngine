@@ -1,0 +1,742 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"fr",
+				"frameTime"
+			],
+			[
+				"lo",
+				"location2"
+			],
+			[
+				"t",
+				"Texture1"
+			],
+			[
+				"s",
+				"size2"
+			],
+			[
+				"l",
+				"location2"
+			],
+			[
+				"vec",
+				"Vector2"
+			],
+			[
+				"platfor",
+				"platfomr"
+			],
+			[
+				"pl",
+				"platform1"
+			],
+			[
+				"get",
+				"getTexture"
+			],
+			[
+				"rend",
+				"renderer"
+			],
+			[
+				"Redn",
+				"RenderWindow"
+			],
+			[
+				"n",
+				"nullptr"
+			],
+			[
+				"re",
+				"renderer"
+			],
+			[
+				"h",
+				"height"
+			],
+			[
+				"anim",
+				"animationCounter"
+			],
+			[
+				"frames",
+				"framesAmount"
+			],
+			[
+				"hitbox",
+				"hitBoxOffSet"
+			],
+			[
+				"hi",
+				"hitBoxOffSet"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "#include <iostream>\n\n#include <SDL2/SDL.h>\n#include <SDL2/SDL_IMAGE.h>\n\n#include \"myEngine.h\"\n\nint main(int argc, char* argv[])\t\n{\n\tSDL_Init(SDL_INIT_EVERYTHING);\n\n\tconst int windowHeight = 800;\n\tconst int windowWidth = 450;\n\n\tSDL_Window* window = SDL_CreateWindow(\"Title\", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, windowHeight, windowWidth, SDL_WINDOW_SHOWN);\n\t\n\tSDL_Renderer* renderer = SDL_CreateRenderer(window, -1, 0);\n\n\tSDL_Event event;\n\n\tSDL_Texture* texture1 = loadTexture(renderer, \"res/texture1.png\");\n\n\tVector2 location = {10, 100};\n\tVector2 size = {75, 75};\n\n\tbool running = true;\n\n\twhile (running)\n\t{\n\t\twhile (SDL_PollEvent(&event))\n\t\t{\n\t\t\tif (event.type == SDL_QUIT) // check if the window was closed\n\t\t\t{\n\t\t\t\trunning = false; // closing the window\n\t\t\t}\n\t\t\tif (event.key.keysym.sym == SDLK_RETURN)\n\t\t}\n\n\t\tRender(0, 0, 50, 50, texture1, renderer);\n\n\t\tSDL_RenderClear(renderer); // clearing the screan\n\n\t\tRenderV(location, size, texture1, renderer);\n\n\t\tSDL_RenderPresent(renderer); // rendering the current screen\n\t}\n\n\treturn 0;\n}",
+			"file": "main.cpp",
+			"file_size": 1040,
+			"file_write_time": 133246522932313714,
+			"settings":
+			{
+				"buffer_size": 1049,
+				"line_ending": "Windows"
+			},
+			"undo_stack":
+			[
+				[
+					19,
+					1,
+					"insert",
+					{
+						"characters": "\nif"
+					},
+					"BAAAAAYDAAAAAAAABwMAAAAAAAAAAAAABwMAAAAAAAAKAwAAAAAAAAAAAAAKAwAAAAAAAAsDAAAAAAAAAAAAAAsDAAAAAAAADAMAAAAAAAAAAAAA",
+					"AwAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAYDAAAAAAAABgMAAAAAAAAAAAAAAADwvw"
+				],
+				[
+					20,
+					1,
+					"insert_snippet",
+					{
+						"contents": "($0)"
+					},
+					"AQAAAAwDAAAAAAAADgMAAAAAAAAAAAAA",
+					"AwAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAwDAAAAAAAADAMAAAAAAAAAAAAAAADwvw"
+				],
+				[
+					21,
+					1,
+					"run_macro_file",
+					{
+						"file": "res://Packages/Default/Delete Left Right.sublime-macro"
+					},
+					"AgAAAAwDAAAAAAAADAMAAAAAAAABAAAAKAwDAAAAAAAADAMAAAAAAAABAAAAKQ",
+					"AwAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAA0DAAAAAAAADQMAAAAAAAAAAAAAAADwvw"
+				],
+				[
+					22,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAAAwDAAAAAAAADQMAAAAAAAAAAAAA",
+					"AwAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAwDAAAAAAAADAMAAAAAAAAAAAAAAADwvw"
+				],
+				[
+					23,
+					1,
+					"insert_snippet",
+					{
+						"contents": "($0)"
+					},
+					"AQAAAA0DAAAAAAAADwMAAAAAAAAAAAAA",
+					"AwAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAA0DAAAAAAAADQMAAAAAAAAAAAAAAADwvw"
+				],
+				[
+					24,
+					1,
+					"insert",
+					{
+						"characters": "Ev"
+					},
+					"AgAAAA4DAAAAAAAADwMAAAAAAAAAAAAADwMAAAAAAAAQAwAAAAAAAAAAAAA",
+					"AwAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAA4DAAAAAAAADgMAAAAAAAAAAAAAAADwvw"
+				],
+				[
+					25,
+					1,
+					"insert_completion",
+					{
+						"completion": "event",
+						"format": "text",
+						"keep_prefix": false,
+						"must_insert": false,
+						"trigger": "event"
+					},
+					"AgAAAA4DAAAAAAAADgMAAAAAAAACAAAARXYOAwAAAAAAABMDAAAAAAAAAAAAAA",
+					"AwAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAABADAAAAAAAAEAMAAAAAAAAAAAAAAADwvw"
+				],
+				[
+					26,
+					1,
+					"insert",
+					{
+						"characters": ".key"
+					},
+					"BAAAABMDAAAAAAAAFAMAAAAAAAAAAAAAFAMAAAAAAAAVAwAAAAAAAAAAAAAVAwAAAAAAABYDAAAAAAAAAAAAABYDAAAAAAAAFwMAAAAAAAAAAAAA",
+					"AwAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAABMDAAAAAAAAEwMAAAAAAAAAAAAAAADwvw"
+				],
+				[
+					27,
+					1,
+					"insert",
+					{
+						"characters": ".keysy"
+					},
+					"BgAAABcDAAAAAAAAGAMAAAAAAAAAAAAAGAMAAAAAAAAZAwAAAAAAAAAAAAAZAwAAAAAAABoDAAAAAAAAAAAAABoDAAAAAAAAGwMAAAAAAAAAAAAAGwMAAAAAAAAcAwAAAAAAAAAAAAAcAwAAAAAAAB0DAAAAAAAAAAAAAA",
+					"AwAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAABcDAAAAAAAAFwMAAAAAAAAAAAAAAADwvw"
+				],
+				[
+					28,
+					1,
+					"insert",
+					{
+						"characters": "um"
+					},
+					"AgAAAB0DAAAAAAAAHgMAAAAAAAAAAAAAHgMAAAAAAAAfAwAAAAAAAAAAAAA",
+					"AwAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAB0DAAAAAAAAHQMAAAAAAAAAAAAAAADwvw"
+				],
+				[
+					29,
+					2,
+					"left_delete",
+					null,
+					"AgAAAB4DAAAAAAAAHgMAAAAAAAABAAAAbR0DAAAAAAAAHQMAAAAAAAABAAAAdQ",
+					"AwAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAB8DAAAAAAAAHwMAAAAAAAAAAAAAAADwvw"
+				],
+				[
+					30,
+					1,
+					"insert",
+					{
+						"characters": "m.sym"
+					},
+					"BQAAAB0DAAAAAAAAHgMAAAAAAAAAAAAAHgMAAAAAAAAfAwAAAAAAAAAAAAAfAwAAAAAAACADAAAAAAAAAAAAACADAAAAAAAAIQMAAAAAAAAAAAAAIQMAAAAAAAAiAwAAAAAAAAAAAAA",
+					"AwAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAB0DAAAAAAAAHQMAAAAAAAAAAAAAAADwvw"
+				],
+				[
+					31,
+					1,
+					"insert",
+					{
+						"characters": " =="
+					},
+					"AwAAACIDAAAAAAAAIwMAAAAAAAAAAAAAIwMAAAAAAAAkAwAAAAAAAAAAAAAkAwAAAAAAACUDAAAAAAAAAAAAAA",
+					"AwAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAACIDAAAAAAAAIgMAAAAAAAAAAAAAAADwvw"
+				],
+				[
+					32,
+					1,
+					"insert",
+					{
+						"characters": " SD"
+					},
+					"AwAAACUDAAAAAAAAJgMAAAAAAAAAAAAAJgMAAAAAAAAnAwAAAAAAAAAAAAAnAwAAAAAAACgDAAAAAAAAAAAAAA",
+					"AwAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAACUDAAAAAAAAJQMAAAAAAAAAAAAAAADwvw"
+				],
+				[
+					33,
+					1,
+					"insert",
+					{
+						"characters": "LK°"
+					},
+					"AwAAACgDAAAAAAAAKQMAAAAAAAAAAAAAKQMAAAAAAAAqAwAAAAAAAAAAAAAqAwAAAAAAACsDAAAAAAAAAAAAAA",
+					"AwAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAACgDAAAAAAAAKAMAAAAAAAAAAAAAAADwvw"
+				],
+				[
+					34,
+					1,
+					"left_delete",
+					null,
+					"AQAAACoDAAAAAAAAKgMAAAAAAAACAAAAwrA",
+					"AwAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAACsDAAAAAAAAKwMAAAAAAAAAAAAAAADwvw"
+				],
+				[
+					35,
+					1,
+					"insert",
+					{
+						"characters": "_"
+					},
+					"AQAAACoDAAAAAAAAKwMAAAAAAAAAAAAA",
+					"AwAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAACoDAAAAAAAAKgMAAAAAAAAAAAAAAADwvw"
+				],
+				[
+					36,
+					1,
+					"insert",
+					{
+						"characters": "E"
+					},
+					"AQAAACsDAAAAAAAALAMAAAAAAAAAAAAA",
+					"AwAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAACsDAAAAAAAAKwMAAAAAAAAAAAAAAADwvw"
+				],
+				[
+					37,
+					1,
+					"left_delete",
+					null,
+					"AQAAACsDAAAAAAAAKwMAAAAAAAABAAAARQ",
+					"AwAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAACwDAAAAAAAALAMAAAAAAAAAAAAAAADwvw"
+				],
+				[
+					38,
+					1,
+					"insert",
+					{
+						"characters": "RETURJH"
+					},
+					"BwAAACsDAAAAAAAALAMAAAAAAAAAAAAALAMAAAAAAAAtAwAAAAAAAAAAAAAtAwAAAAAAAC4DAAAAAAAAAAAAAC4DAAAAAAAALwMAAAAAAAAAAAAALwMAAAAAAAAwAwAAAAAAAAAAAAAwAwAAAAAAADEDAAAAAAAAAAAAADEDAAAAAAAAMgMAAAAAAAAAAAAA",
+					"AwAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAACsDAAAAAAAAKwMAAAAAAAAAAAAAAADwvw"
+				],
+				[
+					39,
+					2,
+					"left_delete",
+					null,
+					"AgAAADEDAAAAAAAAMQMAAAAAAAABAAAASDADAAAAAAAAMAMAAAAAAAABAAAASg",
+					"AwAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAADIDAAAAAAAAMgMAAAAAAAAAAAAAAADwvw"
+				],
+				[
+					40,
+					1,
+					"insert",
+					{
+						"characters": "J"
+					},
+					"AQAAADADAAAAAAAAMQMAAAAAAAAAAAAA",
+					"AwAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAADADAAAAAAAAMAMAAAAAAAAAAAAAAADwvw"
+				],
+				[
+					41,
+					1,
+					"left_delete",
+					null,
+					"AQAAADADAAAAAAAAMAMAAAAAAAABAAAASg",
+					"AwAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAADEDAAAAAAAAMQMAAAAAAAAAAAAAAADwvw"
+				],
+				[
+					42,
+					1,
+					"insert",
+					{
+						"characters": "N"
+					},
+					"AQAAADADAAAAAAAAMQMAAAAAAAAAAAAA",
+					"AwAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAADADAAAAAAAAMAMAAAAAAAAAAAAAAADwvw"
+				],
+				[
+					44,
+					1,
+					"insert",
+					{
+						"characters": "\n"
+					},
+					"BAAAADIDAAAAAAAAMwMAAAAAAAAAAAAAMwMAAAAAAAA2AwAAAAAAAAAAAAAzAwAAAAAAADMDAAAAAAAAAwAAAAkJCTMDAAAAAAAANwMAAAAAAAAAAAAA",
+					"AwAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAADIDAAAAAAAAMgMAAAAAAAAAAAAAAADwvw"
+				],
+				[
+					45,
+					5,
+					"left_delete",
+					null,
+					"BQAAADYDAAAAAAAANgMAAAAAAAABAAAACTUDAAAAAAAANQMAAAAAAAABAAAACTQDAAAAAAAANAMAAAAAAAABAAAACTMDAAAAAAAAMwMAAAAAAAABAAAACTIDAAAAAAAAMgMAAAAAAAABAAAACg",
+					"AwAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAADcDAAAAAAAANwMAAAAAAAAAAAAAAADwvw"
+				]
+			]
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"package ",
+				"Package Control: Remove Package"
+			],
+			[
+				"github ",
+				"Github: Repository"
+			],
+			[
+				"git add",
+				"Git: Add All"
+			],
+			[
+				"git in",
+				"Git: Init"
+			],
+			[
+				"add ",
+				"Git: Add All"
+			],
+			[
+				"git i",
+				"Git: Init"
+			],
+			[
+				"github",
+				"Github: Open File"
+			],
+			[
+				"package inst",
+				"Package Control: Install Package"
+			],
+			[
+				"remov",
+				"Package Control: Remove Package"
+			],
+			[
+				"git all",
+				"Git: Add All"
+			],
+			[
+				"Git",
+				"Git: Init"
+			],
+			[
+				"remote",
+				"Git: Track Remote Branch"
+			],
+			[
+				"push",
+				"Git: Push"
+			],
+			[
+				"git co",
+				"Git: Commit"
+			],
+			[
+				"git ad",
+				"Git: Add All"
+			],
+			[
+				"Git: ",
+				"Git: Init"
+			],
+			[
+				"com",
+				"Git: Commit"
+			],
+			[
+				"Git commit ",
+				"Git: Commit"
+			],
+			[
+				"Git commit",
+				"Git: Commit"
+			],
+			[
+				"Git co",
+				"Git: Commit"
+			],
+			[
+				"Git ad",
+				"Git: Add All"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"theme",
+				"UI: Select Theme"
+			],
+			[
+				"git",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: Remove Package"
+			],
+			[
+				"install p",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"Set Syntax: C++"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/games/SDL2myEngine",
+		"/C/games/SDL2myEngine/res"
+	],
+	"file_history":
+	[
+		"/C/games/SDL2myEngine/SDL myEngine.sublime-project",
+		"/C/games/SDL2myEngine/run release.bat",
+		"/C/games/SDL2myEngine/run debug.bat",
+		"/C/games/SDL2myEngine/myEngine/sourceFiles/inputHandler.cpp",
+		"/C/games/SDL2myEngine/myEngine/headerFiles/inputHandler.h",
+		"/N/RFID/MFRC522-1.4.10/examples/ReadNUID/ReadNUID.ino",
+		"/N/RFID/MFRC522-1.4.10/examples/ReadUidMultiReader/ReadUidMultiReader.ino",
+		"/N/RFID/MFRC522-1.4.10/examples/ReadAndWrite/ReadAndWrite.ino",
+		"/N/RFID/MFRC522-1.4.10/examples/DumpInfo/DumpInfo.ino",
+		"/N/RFID/MFRC522-1.4.10/examples/rfid_default_keys/rfid_default_keys.ino",
+		"/C/games/SDL2myEngine/renderImage.cpp",
+		"/C/games/SDL2 tut/headerFiles/Textures.hpp",
+		"/C/games/sdl - setup/include/headerFiles/Entity.h",
+		"/C/games/sdl - setup/include/headerFiles/Vector2.h",
+		"/C/games/sdl - setup/include/sourceFiles/WindowRender.cpp",
+		"/C/games/sdl - setup/include/headerFiles/WindowRender.h",
+		"/C/games/sdl - setup/include/sourceFiles/Entity.cpp",
+		"/C/games/sdl - setup/src/main.cpp",
+		"/C/games/sdl - setup/include/headerFiles/include.h",
+		"/C/games/sdl - setup/include/headerFiles/Vecor2.h",
+		"/C/games/sdl - setup/Physics 2D Platformer SDL.sublime-project",
+		"/C/games/sdl - setup/src/WindowRender.cpp",
+		"/C/games/sdl - setup/include/WindowRender.h",
+		"/C/games/sdl - setup/src/Entity.cpp",
+		"/C/games/sdl - setup/include/Entity.h",
+		"/C/games/sdl - setup/src/RenderWindow.cpp",
+		"/C/games/sdl - setup/include/RenderWindow.h",
+		"/C/games/sdl/src/RenderWindow.cpp",
+		"/C/games/sdl/include/RenderWindow.h",
+		"/C/games/sdl/src/main.cpp",
+		"/C/games/sdl/src/Entity.cpp",
+		"/C/games/sdl/include/Entity.h",
+		"/C/games/sdl/Physics 2D Platformer SDL.sublime-project",
+		"/C/games/sdl/res/gfx/ground_grass_1.png",
+		"/C/games/sdl/include/RenderWindow.hpp",
+		"/C/Users/Marty/Desktop/Physics 2D Platformer SDL/Physics 2D Platformer SDL.sublime-project",
+		"/C/SDL2-2.0.10/Makefile",
+		"/C/Users/Marty/Desktop/A Physics Based 2D Platformer in SDL/SDL Platformer.sublime-project",
+		"/home/marty/Downloads/SDL2_image-2.0.5/README.txt",
+		"/home/marty/Desktop/Tutorials/C++ SDL2 2D Platformer/Current/src/main.cpp",
+		"/home/marty/Desktop/Tutorials/C++ 2D Platformer SFML/Current/include/Entity.hpp",
+		"/home/marty/Documents/Video jokes",
+		"/home/marty/Desktop/Tutorials/C++ 2D Platformer SFML/Current/include/Player.hpp",
+		"/home/marty/Desktop/Tutorials/C++ 2D Platformer SFML/Current/include/Hitbox.hpp",
+		"/home/marty/Dev/Tutorials/C++ 2D Platformer SFML/Current/Tower Defender 2D.sublime-project",
+		"/home/marty/Dev/Tutorials/C++/Current/src/player.cpp",
+		"/home/marty/Dev/Tutorials/C++/Current/Tower Defender 2D.sublime-project",
+		"/home/marty/Dev/Tutorials/C++/Current/include/Entity.hpp",
+		"/home/marty/Dev/Tutorials/C++/Current/src/entity.cpp",
+		"/home/marty/Dev/Tutorials/C++/Current/src/main.cpp",
+		"/home/marty/Dev/Tutorials/C++/Current/build.sh",
+		"/home/marty/Dev/Tower Defender 2D/Broken/src/player.cpp",
+		"/home/marty/Dev/Tower Defender 2D/Broken/src/main.cpp",
+		"/home/marty/Dev/Tower Defender 2D/Fixing/include/Hitbox.hpp",
+		"/home/marty/Dev/Tower Defender 2D/Fixing/Tower Defender 2D.sublime-project",
+		"/home/marty/Dev/Tower Defender 2D/Fixing/src/main.cpp",
+		"/home/marty/Dev/Tutorials/C++/SFML 2D Platformer/src/main.cpp",
+		"/home/marty/Dev/Tutorials/C++/SFML 2D Platformer/include/Entity.hpp",
+		"/home/marty/Dev/Tutorials/C++/SFML 2D Platformer/src/entity.cpp",
+		"/home/marty/Dev/Tower Defender 2D/Tower Defender 2D.sublime-project",
+		"/home/marty/Dev/Tower Defender 2D/include/Platform.hpp",
+		"/media/marty/CC3E97D03E97B246/Data 2019/Dev/C++/SFML 2D Platformer/src/main.cpp",
+		"/home/marty/Dev/Tower Defender 2D/src/arrow.cpp",
+		"/home/marty/Dev/Tower Defender 2D/src/object.cpp",
+		"/home/marty/Dev/Tower Defender 2D/bin/debug/main",
+		"/home/marty/.config/sublime-text-3/Packages/Default/exec.py",
+		"/home/marty/Dev/OpenGL 3D Game/src/main.cpp",
+		"/home/marty/.config/sublime-text-3/Packages/User/3024 Night Custom.tmTheme"
+	],
+	"find":
+	{
+		"height": 29.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"replace",
+			"{\n",
+			"hitbox.bottom",
+			"hitbox.top",
+			"hitbox.right",
+			"hitbox.left",
+			"vertices",
+			"texBox",
+			"m_texBox",
+			"m_vertices",
+			"vertices",
+			"initTextureBox",
+			"tBox",
+			"num",
+			"g"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"y + h",
+			"y",
+			"x + w",
+			"x",
+			"m_vertices",
+			"vertices",
+			"texBox",
+			"initTexBox",
+			"initTextureBox",
+			"levelSize"
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "main.cpp",
+					"selected": true,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1049,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								487,
+								487
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 264.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"stack_multiselect": false,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 29.0
+	},
+	"input":
+	{
+		"height": 54.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Build Debug",
+	"project": "SDL myEngine.sublime-project",
+	"replace":
+	{
+		"height": 54.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 320.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
